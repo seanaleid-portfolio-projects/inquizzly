@@ -23,6 +23,8 @@ import PeopleIcon from '@material-ui/icons/People';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import LanguageIcon from '@material-ui/icons/Language';
 
+// components
+import Content from "./components/content.js";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -51,13 +53,13 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "1.5rem",
   },
   search: {
-    marginRight: "1.5rem",
+    marginRight: "5rem",
     width: "300px"
   },
   avatar: {
     height: "2.5rem",
     width: "2.5rem",
-    marginRight: "1.5rem",
+    marginRight: "1rem",
   },
   button: {
     backgroundColor: "#F57B51",
@@ -69,6 +71,16 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "#fff",
       border: "2px solid #F57B51"
     }
+  },
+  inside: {
+    display: "flex",
+    justifyContent: "center",
+  },
+  content: {
+    backgroundColor: "red",
+    maxWidth: "1200px",
+    marginTop: "2rem",
+    marginBottom: "2rem",
   }
 }));
 
@@ -138,16 +150,17 @@ export default function App(props) {
         </Toolbar>
       </AppBar>
       <Toolbar id="back-to-top-anchor" />
-      <Container className={classes.background}>
-        <Box my={2} >
-          {[...new Array(75)]
+      <Container className={classes.inside}>
+        <Box my={2} className={classes.content}>
+          <Content />
+          {/* {[...new Array(75)]
             .map(
               () => `Cras mattis consectetur purus sit amet fermentum.
 Cras justo odio, dapibus ac facilisis in, egestas eget quam.
 Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
 Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
             )
-            .join('\n')}
+            .join('\n')} */}
         </Box>
       </Container>
       <ScrollTop {...props}>

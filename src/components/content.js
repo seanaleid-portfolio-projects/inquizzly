@@ -9,10 +9,16 @@ const useStyles = makeStyles (() => ({
     topics: {
       backgroundColor: "blue",
       padding: "0.5rem",
+      position: "fixed",
+      width: "200px",
+      color: "white",
     },
     questions: {
       backgroundColor: "green",
       padding: "0.5rem",
+      marginLeft: "200px",
+      height: "2000px",
+      color: "white",
     },
     improve: {
       backgroundColor: "yellow",
